@@ -19,7 +19,6 @@ const Hero = () => {
                     </button>
                 </div>
 
-
                 <div
                     className="w-[610] h-[624px]  mt-40 left-20 hidden lg:flex justify-center items-center relative"
                 >

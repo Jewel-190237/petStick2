@@ -63,7 +63,7 @@ const Service2 = () => {
                     </div>
                     {/* Last part  */}
                     <div className='hidden lg:block flex-1'>
-                        <Image className='-mt-52' src='/home1/service/shape.svg' width={600} height={900} alt='element' />
+                        <Image className='-mt-48 ml-10' src='/home1/service/shape.svg' width={600} height={900} alt='element' />
                         <Image className='-mt-[190px] -ml-20' src='/home1/service/carrier.svg' width={100} height={100} alt='carrier' />
                         <Image className='-mt-60' src='/home1/service/cat.svg' width={593} height={500} alt='cat' />
                     </div>
