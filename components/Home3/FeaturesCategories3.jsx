@@ -47,9 +47,10 @@ const FeaturesCategories3 = () => {
     ];
 
     return (
-        <div className="max-w-[1320px] mx-auto mt-16">
+        <div className="pet-container mt-16">
             <div className="max-w-[500px] mx-auto">
                 <HeadingMiddle
+                align='center'
                     heading="Features Categories"
                     description="At petstick, access pet listings, shop easily, and book grooming, vet visits, and training all through personalized profiles."
                 />

@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 .pet-container {
-  @apply max-w-[1320px] mx-auto px-3 lg:px-0
+  @apply max-w-[1320px] mx-auto px-3 xl:px-0
 }
 
 .description {
@@ -14,7 +14,7 @@
 }
 
 .heading1 {
-  @apply font-laila  text-[24px] md:text-3xl lg:text-[40px] xl:text-5xl capitalize font-bold text-center
+  @apply font-laila  text-[24px] md:text-3xl lg:text-[40px] xl:text-5xl capitalize font-bold
 }
 
 .heading2 {

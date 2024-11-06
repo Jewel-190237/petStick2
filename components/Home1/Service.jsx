@@ -47,10 +47,18 @@ const Service = () => {
       <div className="pet-container py-8 md:py-10 lg:my-12 xl:my-14">
         <div className="flex items-center">
           <h1 className="relative z-50 heading1 !text-left">our services</h1>
-          <div className=" hidden lg:flex relative z-10 bg-primary bg-opacity-70 w-[56px] h-[56px] rounded-full -ml-7"> </div>
-          <Image className="hidden lg:flex -ml-5 relative z-30" src="/home1/service/pin.svg" width={96} height={1} alt="pin" />
+          <div className=" hidden lg:flex relative z-10 bg-primary bg-opacity-70 w-[56px] h-[56px] rounded-full -ml-7">
+            {" "}
+          </div>
+          <Image
+            className="hidden lg:flex -ml-5 relative z-30"
+            src="/home1/service/pin.svg"
+            width={96}
+            height={1}
+            alt="pin"
+          />
         </div>
-        <p className="description lg:mt-6 w-full lg:w-[50%]">
+        <p className="description mt-3 w-full lg:w-[50%]">
           Designed so animals can relax & indulge in pet stylists, run around
           our exercise yards, make new friends in doggy daycare, or simply spend
           hours in our dog grooming salon.
@@ -140,7 +148,15 @@ const Service = () => {
             ))}
           </div>
         </div>
+        
       </div>
+      <Image
+      className="hidden 2xl:flex -mt-48"
+          src="/home1/DayCare/shape.svg"
+          width={200}
+          height={200}
+          alt="Shpe"
+        />
     </section>
   );
 };

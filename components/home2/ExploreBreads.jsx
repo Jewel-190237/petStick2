@@ -40,8 +40,8 @@ const ExploreBreads = () => {
     };
 
     return (
-        <div className='max-w-[1320px] mx-auto my-[120px]'>
-           <div className='max-w-[600px]'>
+        <div className='pet-container my-[120px]'>
+           <div className='max-w-[660px]'>
            <HeadingLeft
                 heading='Explore Breeds'
                 description='Designed so animals can relax & indulge in pet stylists, run around our exercise yards, make new friends in doggy daycare, or simply spend hours in our dog grooming salon.'
