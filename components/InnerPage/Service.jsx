@@ -155,7 +155,7 @@ const Service = () => {
   return (
     <section className="mt-1">
       <BasicHeader heading="service" />
-      <div className="pet-container mt-12 md:mt-16 lg:mt-20 xl:mt-28">
+      <div className="pet-container mt-12 md:mt-16 lg:mt-20 xl:mt-24">
         <div className="flex flex-col md:flex-row md:gap-3 lg:gap-6">
           <div className="w-full md:w-1/2 lg:w-[25%] box-shadow p-4 md:p-5 lg:p-6">
             <p className="heading3 border-b border-[#D9D9D9] pb-5 lg:pb-6">

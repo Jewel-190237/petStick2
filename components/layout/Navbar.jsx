@@ -18,7 +18,7 @@ const links = [
             { name: 'Home 3', path: '/home3' },
         ]
     },
-    { name: 'Pets', path: 'pets' },
+    { name: 'Pets', path: '/pets' },
     {
         name: 'Service',
         path: '/service'
