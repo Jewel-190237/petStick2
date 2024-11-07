@@ -4,7 +4,7 @@ import React from 'react';
 
 const FeatureCard = ({ bgImage, innerImage, title }) => {
     return (
-        <div className='flex flex-col max-w-[200px]'>
+        <div className='flex flex-col max-w-[200px] mx-auto'>
             <div
                 className="max-w-[200px] h-[200px] bg-cover bg-center bg-no-repeat overflow-hidden"
                 style={{ backgroundImage: `url('${bgImage}')` }}

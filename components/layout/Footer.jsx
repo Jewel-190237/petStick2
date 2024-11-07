@@ -84,7 +84,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className={`absolute bottom-0 -ml-[295px] ${isVisible ? 'animate-slideInRight' : 'hidden'}`}>
+                <div className={`hidden xl:flex absolute bottom-0 -ml-[295px] ${isVisible ? 'animate-slideInRight' : 'hidden'}`}>
                     <Image
                         className="max-h-[300px] max-w-[348px]"
                         src="/footer/footerDog.svg"

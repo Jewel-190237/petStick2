@@ -8,7 +8,7 @@ import { GoHeart } from "react-icons/go";
 const SellingCard3 = ({ image, hoverImage, heading, rating, name, price }) => {
     return (
         <div className="relative p-4 border border-[#D9D9D9] rounded-[8px] group transition-all duration-300 hover:scale-105">
-            <div className="w-full lg:max-w-[284px] h-full lg:max-h-[300px] relative">
+            <div className="w-full lg:max-w-[284px] lg:max-h-[300px] relative">
                 {/* Primary image */}
                 <Image
                     className="w-full "
@@ -32,7 +32,7 @@ const SellingCard3 = ({ image, hoverImage, heading, rating, name, price }) => {
                         {heading}
                     </h1>
                     <div className="flex items-center my-2">
-                        <Rate disabled defaultValue={4} count={5} />
+                        <Rate disabled defaultValue={rating} count={5} />
 
                     </div>
                 </div>

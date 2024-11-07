@@ -101,7 +101,7 @@ const FeaturesCategories = () => {
             }}
             modules={[Keyboard, Navigation, Pagination]} // Add Pagination module
             ref={swiperRef}
-            className="mt-8 md:mt-10 lg:mt-12 xl:mt-14"
+            className="mt-8 md:mt-10 lg:mt-12 xl:mt-14 "
           >
             {features.map((feature) => (
               <SwiperSlide key={feature.id}>

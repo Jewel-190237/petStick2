@@ -47,7 +47,7 @@ const Health3 = () => {
     active === "dog" ? dogData : active === "cat" ? catData : otherData;
 
   return (
-    <div className="pet-container mt-20 flex flex-col sm:flex-row-reverse sm:gap-5 md:gap-6 lg:gap-16 xl:gap-20 items-center bg-white shadow-lg rounded-[40px]">
+    <div className="pet-container mt-20 flex flex-col sm:flex-row-reverse sm:gap-5 md:gap-6 lg:gap-16 xl:gap-20 items-center bg-white health-shadow rounded-[40px]">
       <div className="flex-1 px-5 md:px-6 lg:px-8 xl:px-10 py-8 md:py-10 lg:py-12 xl:py-14">
         <div className="max-w-[510px]">
           <HeadingMiddle

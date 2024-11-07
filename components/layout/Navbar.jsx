@@ -33,7 +33,7 @@ const links = [
         name: 'More',
         path: '/more',
         submenu: [
-            { name: 'Career', path: '/v3/career' },
+            { name: 'Chart', path: 'chart' },
             { name: "Terms & Condition", path: '/v3/condition' },
             { name: "FAQ'S", path: '/v3/faq' },
             { name: "Pricing", path: '/v3/pricing' },
@@ -132,7 +132,7 @@ const Navbar = ({ textColor }) => {
 
                 {/* Click-based dropdown for mobile screens */}
                 {link.submenu && openDropdown === link.name && isOpen && (
-                    <div className="lg:hidden absolute left-4 bg-white text-black rounded-lg z-50">
+                    <div className="lg:hidden absolute left-4 bg-red-500 !text-white rounded-lg z-50">
                         {link.submenu.map((subLink, subIndex) => (
                             <Link href={subLink.path} key={subIndex}>
                                 <p
@@ -163,7 +163,7 @@ const Navbar = ({ textColor }) => {
                 </Link>
 
                 <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2 ml-8">
-                    <button className={`text-[#FFF] text-lg bg-[#E65F33] px-5 py-3 sm:px-8 sm:py-4 rounded-full`}>
+                    <button className={`text-[#FFF] whitespace-pre text-[12px] md:text-[14px] lg:text-lg bg-[#E65F33] px-5 py-3 sm:px-8 sm:py-4 rounded-full`}>
                         Become A Seller
                     </button>
                 </div>
@@ -171,7 +171,7 @@ const Navbar = ({ textColor }) => {
                 <div className="lg:hidden flex flex-col justify-center">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="text-[#fff] focus:outline-none absolute right-4"
+                        className=" focus:outline-none absolute right-4"
                     >
                         {isOpen ? (
                             <IoMdCloseCircle className="text-3xl" />
@@ -191,7 +191,7 @@ const Navbar = ({ textColor }) => {
                         <MdOutlineShoppingCart className= {`text-2xl ${textColorClass}`} />
                         <FaUserLarge className={`text-2xl ${textColorClass}`} />
                     </div>
-                    <button className={` text-[#fff] text-lg bg-[#E65F33] px-5 py-3 sm:px-10 sm:py-[22px] rounded-full`}>
+                    <button className={` text-[#fff] whitespace-pre text-[12px] md:text-[14px] lg:text-lg bg-[#E65F33] px-5 py-3 sm:px-10 sm:py-[22px] rounded-full`}>
                         Become A Seller
                     </button>
                 </div>
