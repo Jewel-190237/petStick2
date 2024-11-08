@@ -149,7 +149,7 @@ const Navbar = ({ textColor }) => {
         ));
 
     return (
-        <nav className="w-full h-fit relative z-50 py-4">
+        <nav className="w-full h-fit relative z-50 py-5 heading4">
             <div className="max-w-[1320px] px-2 md:px-0 mx-auto flex items-center justify-between">
                 <Link href="/">
                     <div className='md:w-[160px] md:h-[35px] w-[100px] h-[28px]'>

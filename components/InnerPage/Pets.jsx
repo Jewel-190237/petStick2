@@ -5,6 +5,7 @@ import { Input, Pagination, Slider } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ProductCard from "../Common/ProductCard";
+import Image from "next/image";
 
 const Pets = () => {
   const sellingData1 = [
@@ -143,14 +144,54 @@ const Pets = () => {
       price: "$75",
       category: "Airedale Terrier",
     },
+    {
+      _id: "16",
+      image: "/InnerPage/dog.svg",
+      age: 5,
+      rating: 4.4,
+      name: "Doberman Pinscher",
+      price: "$75",
+      category: "Airedale Terrier",
+    },
   ];
-
   const breadData = [
     { item: "All Categories" },
     { item: "Alasken Malamute" },
     { item: "Airedale Terrier" },
     { item: "Beagle" },
     { item: "Bull dog" },
+  ];
+  const relatedData = [
+    {
+      name: "Scottish Fold",
+      image: "/InnerPage/cat.svg",
+      previousPrice: 169.87,
+      currentPrice: 147.75,
+    },
+    {
+      name: "Alasken Malamute",
+      image: "/InnerPage/cat.svg",
+      previousPrice: 169.87,
+      currentPrice: 147.75,
+    },
+    {
+      name: "British Shorthair",
+      image: "/InnerPage/cat.svg",
+      previousPrice: 169.87,
+      currentPrice: 147.75,
+    },
+    {
+      name: "American Bobtail",
+      image: "/InnerPage/cat.svg",
+      previousPrice: 169.87,
+      currentPrice: 147.75,
+    },
+    {
+      name: "Khao Mane",
+      image: "/InnerPage/cat.svg",
+      previousPrice: 169.87,
+      currentPrice: 147.75,
+    },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -186,7 +227,7 @@ const Pets = () => {
   };
 
   return (
-    <div>
+    <div className="mt-1">
       <BasicHeader heading="pet’s" />
       <div className="pet-container mt-12 md:mt-16 lg:mt-20 xl:mt-24">
         <div className="flex flex-col md:flex-row gap-3 lg:gap-5 xl:gap-6">
@@ -197,7 +238,9 @@ const Pets = () => {
                 <Input
                   className="search p-4"
                   placeholder="Choose Your Pet"
-                  prefix={<SearchOutlined className="mr-3" />}
+                  prefix={
+                    <SearchOutlined className="mr-3 text-[16px] lg:text-xl" />
+                  }
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -235,9 +278,7 @@ const Pets = () => {
                     }`}
                     onClick={() => handleBreedClick(data.item)}
                   >
-                    <p className="font-lora font-semibold text-[14px] md:text-[16px] lg:text-[18px]">
-                      {data.item}
-                    </p>
+                    <p className="heading4">{data.item}</p>
                     <FaArrowRightLong
                       className={`text-[12px] md:text-[14px] lg:text-[16px] ${
                         selectedBreed === data.item
@@ -249,8 +290,32 @@ const Pets = () => {
                 ))}
               </div>
             </div>
+            <div className="search-bg p-4 md:p-5 lg:p-6">
+              <p className="text-white heading3 border-b border-[#D9D9D9] pb-5 lg:pb-6">
+                related product
+              </p>
+              <div className="mt-4 md:mt-5 lg:mt-6 xl:mt-8 flex flex-col gap-3 md:gap-4 lg:gap-6">
+                {relatedData.map((data, index) => (
+                  <div key={index} className="flex items-center gap-2 lg:gap-3">
+                    <Image
+                      className="rounded-[10px]"
+                      src={data.image}
+                      width={60}
+                      height={60}
+                      alt="related pet"
+                    />
+                    <div className=" text-white">
+                      <h4 className="heading4">{data.name}</h4>
+                      <div className="mt-3 flex gsp-3 lg:gap-4 items-center description">
+                        <p className="text-primary">{data.currentPrice} $</p>
+                        <p> <del>{data.previousPrice} $</del></p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-
           <div className="w-full md:w-[75%]">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
               {paginatedProducts.map((product, index) => (

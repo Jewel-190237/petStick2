@@ -27,6 +27,12 @@
 .heading3 {
   @apply font-laila font-bold text-xl lg:text-[24px] xl:text-[28px] !leading-[130%] capitalize;
 }
+.heading4 {
+  @apply font-lora font-semibold text-sm lg:text-[16px] xl:text-[18px] !leading-[100%] capitalize;
+}
+.heading5{
+  @apply font-laila font-bold text-xl md:text-[26px] lg:text-[30px] xl:text-[34px] !leading-[110%] capitalize;
+}
 
 // latest post & articles related styles
 .dog-image {
@@ -35,7 +41,7 @@
 
 // Transform a Life related styles
 .pet-button {
-  @apply capitalize px-6 lg:px-8 py-3 lg:py-4 text-[14px] lg:text-[18px] font-lora font-semibold border border-[#E65F33] hover:bg-[#E65F33] text-primary hover:text-white rounded-[40px] transition-transform duration-300 hover:scale-105;
+  @apply capitalize px-6 lg:px-8 py-3 lg:py-4 text-[12px] lg:text-[18px] font-lora font-semibold border border-[#E65F33] hover:bg-[#E65F33] text-primary hover:text-white rounded-[40px] transition-transform duration-300 hover:scale-105;
 }
 
 .check-button {

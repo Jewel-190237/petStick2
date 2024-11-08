@@ -20,7 +20,7 @@ module.exports = {
       keyframes: {
         slideInRight: {
           '0%': { transform: 'translateY(100%)' },  // Start off-screen to the left
-          '100%': { transform: 'translateY(0)' },     // End at the normal position
+          '100%': { transform: 'translateY(0)' },  // End at the normal position
         },
       },
       animation: {
