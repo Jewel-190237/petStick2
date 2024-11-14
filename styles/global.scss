@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+.pet-container {
+  @apply max-w-[1320px] mx-auto px-3 xl:px-0;
+}
+
+.description {
+  @apply font-lora text-sm md:text-[16px] font-normal leading-[100%] md:leading-[130%] xl:leading-[170%];
+}
+.hero-heading {
+  @apply text-[30px] md:text-[40px] lg:text-[56px] xl:text-[64px] font-laila text-textMain font-bold;
+}
+
+.heading1 {
+  @apply font-laila  text-[24px] md:text-3xl lg:text-[40px] xl:text-5xl capitalize font-bold;
+}
+
+.heading2 {
+  @apply font-laila font-bold text-[18px] lg:text-xl xl:text-[24px] !leading-[130%] capitalize;
+}
+
+.heading3 {
+  @apply font-laila font-bold text-xl lg:text-[24px] xl:text-[28px] !leading-[130%] capitalize;
+}
+.heading4 {
+  @apply font-lora font-semibold text-sm lg:text-[16px] xl:text-[18px] !leading-[100%] capitalize;
+}
+.heading5 {
+  @apply font-laila font-bold text-xl md:text-[26px] lg:text-[30px] xl:text-[34px] !leading-[110%] capitalize;
+}
+
+// latest post & articles related styles
+.dog-image {
+  border-radius: 20px 20px 0px 0px;
+}
+
+// Transform a Life related styles
+.pet-button {
+  @apply capitalize px-3 lg:px-8 py-2 lg:py-4 text-[12px] lg:text-[18px] font-lora font-semibold border border-[#E65F33] hover:bg-[#E65F33] text-primary hover:text-white rounded-[40px] transition-transform duration-300 hover:scale-105;
+}
+
+.check-button {
+  @apply px-6 lg:px-8 py-3 lg:py-4 text-[14px] lg:text-[18px] font-lora border border-[#E65F33] hover:bg-[#E65F33] !text-primary hover:!text-white rounded-[20px] transition-transform duration-300 hover:scale-105 capitalize;
+}
+
+.swipper-button {
+  @apply text-[#44433F] hover:text-primary transition-all duration-300;
+}
+
+.team-social-styles {
+  @apply w-10 h-10 rounded-full bg-white text-primary hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300;
+}
+
+.explore {
+  .swiper-pagination {
+    display: flex;
+    position: static;
+    justify-content: flex-start; /* Align to the start (left) */
+    margin-top: 60px; /* Adjust spacing from bottom as needed */
+    width: 200px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #d9d9d9;
+    border-radius: 100%;
+    opacity: 1; /* Ensures bullets are fully visible */
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 40px !important;
+    height: 15px !important;
+    background: #ff6f3f; /* Keep active color consistent */
+    border-radius: 8px !important;
+  }
+}
+
+.hero2 {
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    gap: 10px;
+    width: 120px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: 50%;
+    left: auto;
+    width: 10%;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.3s ease; /* Smooth transition for active bullet */
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 18px;
+    height: 18px;
+    background: #ff6f3f;
+    border-radius: 50%;
+  }
+}
+
+.feature2 {
+  /* Center the pagination in the middle */
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative; /* Removes position conflicts */
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #d9d9d9;
+    border-radius: 100%;
+    opacity: 1; /* Ensures bullets are fully visible */
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 20px !important;
+    height: 20px !important;
+    background: #ff6f3f; /* Keep active color consistent */
+    border-radius: 100px !important;
+  }
+}
+
+.features {
+  /* Center the pagination in the middle */
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative; /* Removes position conflicts */
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #d9d9d9;
+    border-radius: 100%;
+    opacity: 1; /* Ensures bullets are fully visible */
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 40px !important;
+    height: 15px !important;
+    background: #ff6f3f; /* Keep active color consistent */
+    border-radius: 8px !important;
+  }
+}
+
+.bg-container {
+  background-image: url("/home1/looking/bg.svg");
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the background image */
+  position: relative;
+  z-index: 20;
+}
+
+// Service related styles
+.service-heading {
+  @apply font-laila text-xl md:text-2xl lg:text-[28px] xl:text-[32px] font-bold capitalize;
+}
+
+// Online Reservation related styles
+.online-heading {
+  @apply text-[#2B2B2B] text-sm md:text-[16px] lg:text-[18px] font-semibold font-lora capitalize;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  width: 100%;
+  height: 100%;
+  padding: 25px 20px;
+}
+
+.ant-select .ant-select-arrow {
+  color: black;
+  height: 16px;
+  margin-top: 5px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.ant-select .ant-select-selection-placeholder {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.ant-picker {
+  padding: 15px 15px 15px;
+}
+
+.ant-select-selector,
+.ant-select-selector:focus {
+  border-color: #d9d9d9 !important;
+  box-shadow: none !important;
+}
+
+.ant-select-selector:hover,
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #d9d9d9 !important;
+  box-shadow: none !important;
+}
+
+.ant-picker-focused {
+  border-color: #d9d9d9 !important;
+  box-shadow: none !important;
+}
+
+// Testimonials related styles
+.review-card {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+// team2-social-styles
+.team2-social-styles {
+  @apply w-10 h-10 rounded-full bg-white text-[#44433F] hover:text-primary flex items-center justify-center transition-all duration-300;
+}
+
+/* Health3 related styling */
+.custom-radio {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #e65f33;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-radio:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #e65f33;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// health2 related styles
+.health-shadow {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+// Inner Page --> Service related styles
+.box-shadow {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+// pets related style
+.search-bg {
+  border-radius: 20px;
+  background: #4b3c34;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.search {
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+// piganation related styles
+.ant-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inactive state styling */
+// .ant-pagination .ant-pagination-prev,
+// .ant-pagination .ant-pagination-next {
+//   color: #9ca3af; /* Tailwind's gray-400 equivalent */
+// }
+
+// /* Active state styling */
+// .ant-pagination .ant-pagination-prev:hover,
+// .ant-pagination .ant-pagination-next:hover {
+//   color: #e67529; /* Active color */
+// }
+/* Default color for active icons */
+.ant-pagination .ant-pagination-prev,
+.ant-pagination .ant-pagination-next {
+  color: black; /* Active color */
+}
+
+/* Inactive color */
+.ant-pagination .ant-pagination-prev.ant-pagination-disabled,
+.ant-pagination .ant-pagination-next.ant-pagination-disabled {
+  color: #9ca3af; /* Tailwind's gray-400 equivalent */
+}
+
+.ant-pagination .ant-pagination-item,
+.ant-pagination .ant-pagination-prev,
+.ant-pagination .ant-pagination-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  // border-radius: 100%;
+  // background-color: #e67529;
+  // color: #ffffff;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  background-color: #e67529;
+  color: #ffffff;
+  border: none;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: #ffffff;
+}
+
+.ant-pagination .ant-pagination-item {
+  border: 1px solid #d9d9d9;
+  border-radius: 100%;
+}
+
+/* Slider track */
+.ant-slider .ant-slider-track {
+  background-color: #ff6f3f;
+  border-radius: 2px;
+}
+
+/* Hover effect on the entire track */
+.ant-slider:hover .ant-slider-track {
+  background-color: #ff6f3f;
+}
+
+/* Slider handle - before and after pseudo-elements */
+.ant-slider .ant-slider-handle::before,
+.ant-slider .ant-slider-handle::after {
+  background-color: #ff6f3f;
+  border-radius: 50%;
+  content: "";
+}
+
+.ant-slider .ant-slider-handle::before {
+  width: 14px;
+  height: 14px;
+}
+
+.ant-slider .ant-slider-handle::after {
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px #ff6f3f;
+}
+
+/* Hover and focus effects for handles */
+.ant-slider .ant-slider-handle:hover::before,
+.ant-slider .ant-slider-handle:focus::before,
+.ant-slider .ant-slider-handle:hover::after,
+.ant-slider .ant-slider-handle:focus::after {
+  background-color: #ff6f3f;
+  box-shadow: 0 0 0 2px #ff6f3f;
+  border: 2px solid #ff6f3f; /* Add border color to after and before on hover */
+}
+
+/* Hover effect for the first handle */
+.ant-slider .ant-slider-handle-1:hover::before,
+.ant-slider .ant-slider-handle-1:hover::after {
+  background-color: #ff6f3f;
+  border: 2px solid #ff6f3f;
+  box-shadow: 0 0 0 2px #ff6f3f;
+}
+
+/* Hover effect for the second handle (ant-slider-handle-2) */
+.ant-slider .ant-slider-handle-2:hover::before,
+.ant-slider .ant-slider-handle-2:hover::after {
+  background-color: #ff6f3f;
+  border: 2px solid #ff6f3f;
+  box-shadow: 0 0 0 2px #ff6f3f;
+}
+
+/* Handle dragging state with tooltip */
+.ant-slider .ant-slider-handle .ant-slider-handle-dragging .ant-tooltip-open {
+  background-color: #ff6f3f;
+  box-shadow: 0 0 0 2px #ff6f3f;
+}
