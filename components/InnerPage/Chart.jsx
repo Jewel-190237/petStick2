@@ -8,7 +8,6 @@ import {
   Title,
   Tooltip,
   Legend,
-  ArcElement, // This is needed for the circle effect
 } from "chart.js";
 
 // Register necessary components
@@ -19,28 +18,22 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  ArcElement // Register ArcElement for drawing circles
 );
 
 const data = {
   labels: [
-    "Page A",
-    "Page B",
-    "Page C",
-    "Page D",
-    "Page E",
-    "Page F",
-    "Page G",
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   ],
   datasets: [
     {
-      label: "UV",
-      data: [4000, 3000, 2000, 2780, 1890, 2390, 3490],
+      label: "Earning",
+      data: [4000, 3000, 2000, 2780, 1890, 2390, 3490, 2900, 3200, 2500, 2700, 3100],
       backgroundColor: "rgba(179, 205, 173, 0.5)",
     },
     {
-      label: "PV",
-      data: [2400, 1398, 3800, 3908, 4800, 3800, 4300],
+      label: "Spending",
+      data: [2400, 1398, 3800, 3908, 4800, 3800, 4300, 4100, 3700, 4200, 4500, 3900],
       backgroundColor: "rgba(255, 95, 94, 0.5)",
     },
   ],
@@ -51,45 +44,37 @@ const options = {
   maintainAspectRatio: false,
   plugins: {
     tooltip: {
-      // Customize tooltip appearance
       callbacks: {
-        title: (tooltipItems) => {
-          return `Category: ${tooltipItems[0].label}`;
-        },
-        label: (tooltipItem) => {
-          return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`;
-        },
+        title: (tooltipItems) => `Category: ${tooltipItems[0].label}`,
+        label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.raw}`,
       },
       backgroundColor: "rgba(0, 0, 0, 0.7)",
       titleFont: { size: 16 },
       bodyFont: { size: 14 },
     },
-  },
-  // Add custom hover effect for the circle
-  hover: {
-    onHover: (event, chartElement) => {
-      const ctx = event.native.target.getContext("2d");
-      if (chartElement.length) {
-        const { index, datasetIndex } = chartElement[0];
-        const dataPoint = data.datasets[datasetIndex].data[index];
-        const x = chartElement[0].element.x;
-        const y = chartElement[0].element.y;
-
-        // Draw a small circle on hover
-        ctx.beginPath();
-        ctx.arc(x, y - 10, 6, 0, 2 * Math.PI);
-        ctx.fillStyle = "rgba(255, 99, 132, 0.6)";
-        ctx.fill();
-      }
+    legend: {
+      position: 'top',  // Position the legend at the top of the chart
+      labels: {
+        boxWidth: 20,    // Adjust the size of the color boxes in the legend
+        padding: 10,     // Add padding between the labels
+      },
+    },
+    title: {
+      display: true,
+      text: 'Earning & Spending - Statistics', // Display title in the center of the chart
+      font: {
+        size: 20, // Set font size for the title
+      },
+      position: 'top', // Title position at the top
+      align: 'center', // Center align the title
     },
   },
 };
 
-
-
 const Chart = () => (
-  <div className="pet-container mt-20">
-    <div className="w-full lg:w-1/2">
+  <div className="w-full health-shadow rounded-xl p-5">
+    {/* Bar chart */}
+    <div className="h-[400px]">
       <Bar data={data} options={options} />
     </div>
   </div>
